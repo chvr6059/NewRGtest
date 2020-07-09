@@ -10,14 +10,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-settings:
+settings
 - task: TerraformTaskV1@0 
     inputs:
      provider: 'azurerm'
 
      command: 'init'
 
-settings:
+settings
 - task: TerraformTaskV1@0 
     inputs:
      provider: 'azurerm'
