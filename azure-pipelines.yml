@@ -11,7 +11,7 @@ pool:
 
 steps:
 settings
--task: TerraformTaskV1@0 
+task: TerraformTaskV1@0 
 inputs:
      provider: 'azurerm'
 
