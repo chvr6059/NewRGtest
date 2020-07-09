@@ -12,14 +12,14 @@ pool:
 steps:
 settings
 - task: TerraformTaskV1@0 
-inputs:
+    inputs:
      provider: 'azurerm'
 
      command: 'init'
 
 settings
 - task: TerraformTaskV1@0 
-inputs:
+    inputs:
      provider: 'azurerm'
 
      command: 'apply'
