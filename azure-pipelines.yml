@@ -17,10 +17,25 @@ settings
 
      command: 'init'
 
+     workingDirectory: 'StorageAccount-Terraform'
+
+     backendServiceArm: 'your_subscription'
+
+     backendAzureRmResourceGroupName: 'your_resource_group_name'
+
+     backendAzureRmStorageAccountName: 'your_storage_account_name'
+
+     backendAzureRmContainerName: 'your_container_name'
+
+     backendAzureRmKey: 'tf/terraform.tfstate'
+
 settings
 - task: TerraformTaskV1@0 
-    inputs:
+inputs:
      provider: 'azurerm'
 
      command: 'apply'
+
+     workingDirectory: 'StorageAccount-Terraform'
+
 
