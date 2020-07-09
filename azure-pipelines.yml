@@ -10,10 +10,45 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+ 
+- bash: |
+
+ 
+curl 'https://releases.hashicorp.com/terraform/0.12.25/terraform_0.12.25_linux_amd64.zip' --output terraform_0.12.25.zip
+
+ 
+unzip terraform_0.12.25.zip
+
+ 
+mv terraform terraform_0.12.25
+
+ 
+ 
+
+ 
+#echo "credentials \"terraform.automation.agl.com.au\" {token = \"$terraform_token\"}" > ~/.terraformrc
+
+ 
+./terraform_0.12.25 init && ./terraform_0.12.25 plan && ./terraform_0.12.25 apply
+
+ 
+workingDirectory: 'master'
+
+ 
+displayName: 'demotf'
+
+ 
+#env:
+
+ 
+#terraform_token: $(tcs-cloudops-terraform-team-token)
+
+ 
+ 
+
+ 
+trigger: none
+
+ 
+pr: none
