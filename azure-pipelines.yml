@@ -19,7 +19,7 @@ steps:
    ./terraform_0.12.25 plan
 #    - input: false
    ./terraform_0.12.25 apply
-
+      - input: -auto-approve
    ./terraform_0.12.25 apply: yes
    displayName: 'RG creation test'
    workingDirectoty: 
