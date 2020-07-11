@@ -10,22 +10,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - task: TerraformTask@0 
-    inputs:
-      provider: 'azurerm'
-      command: 'init'
-     workingDirectory: 
-     backendServiceArm: 'your_subscription'
-     backendAzureRmResourceGroupName: 'your_resource_group_name'
-     backendAzureRmStorageAccountName: 'your_storage_account_name'
-     backendAzureRmContainerName: 'your_container_name'
-     backendAzureRmKey: 'tf/terraform.tfstate'
-
-  - task: TerraformTask@1 
-    inputs:
-      provider: 'azurerm'
-      command: 'apply'
-
+- bash: |
+curl 'https://releases.hashicorp.com/terraform/0.12.25/terraform_0.12.25_linux_amd64.zip' --output terraform_0.12.25.zip
+unzip terraform_0.12.25.zip
+mv terraform terraform_0.12.25
+./terraform_0.12.25 init && ./terraform_0.12.25 plan && ./terraform_0.12.25 apply
+displayName: 'RG creation test'
      
 
 
