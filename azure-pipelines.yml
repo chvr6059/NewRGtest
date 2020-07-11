@@ -14,8 +14,8 @@ steps:
    curl 'https://releases.hashicorp.com/terraform/0.12.25/terraform_0.12.25_linux_amd64.zip' --output terraform_0.12.25.zip
    unzip terraform_0.12.25.zip
    mv terraform terraform_0.12.25
-#   ./terraform_0.12.25 init && ./terraform_0.12.25 plan && ./terraform_0.12.25 apply
-   ./terraform_0.12.25 init
+   ./terraform_0.12.25 init && ./terraform_0.12.25 plan && ./terraform_0.12.25 apply
+   
    ./terraform_0.12.25 plan
      - input: false
    ./terraform_0.12.25 apply
