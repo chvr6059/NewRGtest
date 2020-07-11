@@ -10,31 +10,22 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
-- task: TerraformTask@0 
+  - task: TerraformTask@0 
     inputs:
-     provider: 'azurerm'
-
-     command: 'init'
-
-     workingDirectory: 'StorageAccount-Terraform'
-
+      provider: 'azurerm'
+      command: 'init'
+     workingDirectory: 
      backendServiceArm: 'your_subscription'
-
      backendAzureRmResourceGroupName: 'your_resource_group_name'
-
      backendAzureRmStorageAccountName: 'your_storage_account_name'
-
      backendAzureRmContainerName: 'your_container_name'
-
      backendAzureRmKey: 'tf/terraform.tfstate'
 
-- task: TerraformTask@1 
-inputs:
-     provider: 'azurerm'
+  - task: TerraformTask@1 
+    inputs:
+      provider: 'azurerm'
+      command: 'apply'
 
-     command: 'apply'
-
-     workingDirectory: 'StorageAccount-Terraform'
+     
 
 
