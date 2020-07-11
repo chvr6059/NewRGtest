@@ -16,7 +16,7 @@ steps:
    mv terraform terraform_0.12.25
    ./terraform_0.12.25 init && ./terraform_0.12.25 plan && ./terraform_0.12.25 apply
 #      - input: -auto-approve
-   ./terraform_0.12.25 apply: '-auto-approve'
+   ./terraform_0.12.25 apply -auto-approve
    displayName: 'RG creation test'
    workingDirectoty: 
    
