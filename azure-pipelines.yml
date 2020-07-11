@@ -11,11 +11,11 @@ pool:
 
 steps:
 - bash: |
-curl 'https://releases.hashicorp.com/terraform/0.12.25/terraform_0.12.25_linux_amd64.zip' --output terraform_0.12.25.zip
-unzip terraform_0.12.25.zip
-mv terraform terraform_0.12.25
-./terraform_0.12.25 init && ./terraform_0.12.25 plan && ./terraform_0.12.25 apply
-displayName: 'RG creation test'
+   curl 'https://releases.hashicorp.com/terraform/0.12.25/terraform_0.12.25_linux_amd64.zip' --output terraform_0.12.25.zip
+   unzip terraform_0.12.25.zip
+   mv terraform terraform_0.12.25
+   ./terraform_0.12.25 init && ./terraform_0.12.25 plan && ./terraform_0.12.25 apply
+   displayName: 'RG creation test'
      
 
 
