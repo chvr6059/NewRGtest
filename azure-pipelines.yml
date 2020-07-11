@@ -15,7 +15,7 @@ steps:
    unzip terraform_0.12.25.zip
    mv terraform terraform_0.12.25
    ./terraform_0.12.25 init && ./terraform_0.12.25 plan && ./terraform_0.12.25 apply
-   accept: yes
+   ./terraform_0.12.25 apply: yes
    displayName: 'RG creation test'
    workingDirectoty: 
    
