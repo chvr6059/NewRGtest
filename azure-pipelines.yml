@@ -17,8 +17,6 @@ steps:
    ./terraform_0.12.25 init && ./terraform_0.12.25 plan && ./terraform_0.12.25 apply
    displayName: 'RG creation test'
    workingDirectoty: 
-
-  trigger: none
-  pr: yes  
+  input: yes 
 
 
