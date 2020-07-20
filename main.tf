@@ -9,6 +9,6 @@ provider "azurerm" {
   tenant_id            = "d7936d91-4baf-4c73-957b-b7c9e15f7545"
 }
 resource "azurerm_resource_group" "NewRGtest2-12july" {
-  name     = "NewRGtest2-22july"
+  name     = "NewRGtest2-23july"
   location = "australia east"
 }
